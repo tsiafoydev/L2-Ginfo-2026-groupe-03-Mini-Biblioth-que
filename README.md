@@ -2,19 +2,19 @@ Nom de projet : Gestion de Mini-Bibliotheque
 
 Les membres :
 
-ANDRIAMAHARINTSOA Nomena Tsiafoy Aldino
-ANDRIAMIHAJA Hanitriniaina Emilia
-RAFANOMEZANTSOANIAINA Mandimbihasina
-AMIR Rahim Jhon's
-TSIMAROFY Romina Olivia
-RAKOTOARIMALALA Mitia Mendrika Hankasitrahana
-ANDRIAMAMPIHAJA Carmelo
-RASOLOFOHARIFARA Marie Rosa
-RAJAOSOLO Manandrazana Eraelien
-CLEMENT Brice
-RAHERIJAONA Manda Fitahiana
-RAFALISON Mury Charmelino
-RAFANAMBINAMBOLA Tantely Noelinah
+-ANDRIAMAHARINTSOA Nomena Tsiafoy Aldino
+-ANDRIAMIHAJA Hanitriniaina Emilia
+-RAFANOMEZANTSOANIAINA Mandimbihasina
+-AMIR Rahim Jhon's
+-TSIMAROFY Romina Olivia
+-RAKOTOARIMALALA Mitia Mendrika Hankasitrahana
+-ANDRIAMAMPIHAJA Carmelo
+-RASOLOFOHARIFARA Marie Rosa
+-RAJAOSOLO Manandrazana Eraelien
+-CLEMENT Brice
+-RAHERIJAONA Manda Fitahiana
+-RAFALISON Mury Charmelino
+-RAFANAMBINAMBOLA Tantely Noelinah
 
  Une application simple pour gérer une petite liste de livres. 
  Fonctionnalités minimales : Ajouter, modifier et supprimer un livre ; rechercher un livre ; indiquer si le livre est disponible ou emprunté.
