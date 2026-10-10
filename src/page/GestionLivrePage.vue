@@ -1,7 +1,11 @@
 <template>
     <div class="contenu">
+      <Barre />
       <div>
         <Livres :livres="livres"/>
+      </div>
+      <div>
+       
       </div>
     </div>
 </template>
@@ -9,6 +13,7 @@
 <script setup>
 import {ref}from 'vue';
 import Livres from'../composants/Livres.vue';
+import Barre from'../composants/Barre_action.vue';
 
 const livres = ref([
  {id:1, titre:"Le Petit Prince",auteur:"Antoine de Saint-Exupéry",statut:"Disponible"},
