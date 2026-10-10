@@ -1,19 +1,24 @@
 <template>
     <div class="contenu">
-      <Barre />
       <div>
-        <Livres :livres="livres"/>
+          <Carte_stat :livres="livres"/>
       </div>
       <div>
-       
+        <Barre />
+      </div>
+      <div>
+        <Livres :livres="livres" @supprimer="supprimeLivre" @modifier="ouvrirModification" />
       </div>
     </div>
+    <Modifier v-if="afficheModal" :livre="livreEnEdition" @enregistrer="modifieLivre" @fermer="fermerModal"/>
 </template>
 
 <script setup>
 import {ref}from 'vue';
 import Livres from'../composants/Livres.vue';
 import Barre from'../composants/Barre_action.vue';
+import Carte_stat from '../composants/Carte_stat.vue';
+import Modifier from '../composants/Modifier.vue';
 
 const livres = ref([
  {id:1, titre:"Le Petit Prince",auteur:"Antoine de Saint-Exupéry",statut:"Disponible"},
@@ -31,7 +36,7 @@ function ouvrirModification(livre) {
   afficheModal.value = true
 }
 
-function modiieLivre(livreModifie) {
+function modifieLivre(livreModifie) {
   livres.value = livres.value.map(livre => {
     if (livre.id === livreModifie.id) {
       return livreModifie
