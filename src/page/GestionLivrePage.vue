@@ -4,11 +4,14 @@
           <Carte_stat :livres="livres"/>
       </div>
       <div>
-        <Barre />
+        <Barre :ouvert="afficheForm" @toggle-form="afficheForm = !afficheForm"/>
       </div>
       <div>
         <Livres :livres="livres" @supprimer="supprimeLivre" @modifier="ouvrirModification" />
       </div>
+      <Transition>
+            <Ajoute v-if="afficheForm"  @ajouter="ajouterLivre" @fermer="fermerForm" />
+       </Transition>
     </div>
     <Modifier v-if="afficheModal" :livre="livreEnEdition" @enregistrer="modifieLivre" @fermer="fermerModal"/>
 </template>
@@ -29,6 +32,7 @@ const livres = ref([
 
 const afficheModal = ref(false)
 const livreEnEdition = ref(null)
+const afficheForm = ref(false)
 
 // Ouvrir la modal de modification
 function ouvrirModification(livre) {
@@ -50,5 +54,14 @@ function fermerModal() {
   afficheModal.value = false
   livreEnEdition.value = null
 }
+//fonction pour ajoute un nouveau livre
+  function ajouterLivre(livre) {
+    livres.value.push({
+      id: Date.now(),
+      titre: livre.titre,
+      auteur: livre.auteur,
+      statut: livre.statut
+    })
+  }
 
 </script>
