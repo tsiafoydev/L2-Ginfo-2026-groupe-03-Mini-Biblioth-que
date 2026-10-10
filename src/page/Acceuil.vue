@@ -58,7 +58,6 @@ import Livres from '../composants/Livres.vue'
       </RouterLink>
     </div>
 
-    <Livres />
   </section>
 
 </main>
