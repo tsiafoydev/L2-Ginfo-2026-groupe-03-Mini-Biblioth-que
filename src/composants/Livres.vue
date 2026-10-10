@@ -9,7 +9,7 @@
             <h3>{{ livre.auteur }}</h3>
             <span>{{ livre.statut }}</span>
             <div class="action">
-                <button class="btn-mod">Modifier</button>
+                <button class="btn-mod" v-on:click="$emit('modifier', livre)">Modifier</button>
                 <button class="btn-supp">Supprimer</button>
             </div>
         </div>
@@ -22,6 +22,8 @@ import { ref } from 'vue';
     defineProps({
         livres: { type: Array, required: true, default: () => [] }
     })
+    
+    defineEmits(['modifier', 'supprimer'])
 
 
 </script>

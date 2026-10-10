@@ -16,4 +16,29 @@ const livres = ref([
  {id:3, titre:"Dune",auteur:"Frank Herbert",statut:"Disponible"},
  {id:4, titre:"L'Etranger",auteur:"Albert Camus",statut:"Emprunte"},
  ])
+
+const afficheModal = ref(false)
+const livreEnEdition = ref(null)
+
+// Ouvrir la modal de modification
+function ouvrirModification(livre) {
+  livreEnEdition.value = livre
+  afficheModal.value = true
+}
+
+function modiieLivre(livreModifie) {
+  livres.value = livres.value.map(livre => {
+    if (livre.id === livreModifie.id) {
+      return livreModifie
+    }
+    return livre
+  })
+  fermerModal()
+}
+// Fermer la modal de modification
+function fermerModal() {
+  afficheModal.value = false
+  livreEnEdition.value = null
+}
+
 </script>
