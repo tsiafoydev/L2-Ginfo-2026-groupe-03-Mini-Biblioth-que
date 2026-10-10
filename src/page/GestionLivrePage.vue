@@ -24,7 +24,6 @@ import Barre from'../composants/Barre_action.vue';
 import Carte_stat from '../composants/Carte_stat.vue';
 import Modifier from '../composants/Modifier.vue';
 
-import Carte from'../composants/Carte_stat.vue'
 
 const livres = ref([
  {id:1, titre:"Le Petit Prince",auteur:"Antoine de Saint-Exupéry",statut:"Disponible"},
