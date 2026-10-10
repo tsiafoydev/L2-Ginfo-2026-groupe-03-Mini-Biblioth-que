@@ -36,7 +36,13 @@
 
 </script>
 
-<style scoped>
+<style>
+#app {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 .sidebar {
   position: fixed;
@@ -53,6 +59,18 @@
   z-index: 100;
   overflow-y: auto;
   box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.sidebar_nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar_nav a svg {
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
@@ -85,6 +103,7 @@
 
 .sidebar_nav .span{
   padding: 0 10px;
+  font-size: 14px;
 }
 .sidebar_nav a {
   display: block;
