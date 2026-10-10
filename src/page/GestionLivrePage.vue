@@ -1,5 +1,10 @@
 <template>
     <div class="contenu">
+<<<<<<< HEAD
+=======
+      <Barre />
+      <Carte />
+>>>>>>> ef1207e (Mise a jour design)
       <div>
           <Carte_stat :livres="livres"/>
       </div>
@@ -17,8 +22,12 @@
 import {ref}from 'vue';
 import Livres from'../composants/Livres.vue';
 import Barre from'../composants/Barre_action.vue';
+<<<<<<< HEAD
 import Carte_stat from '../composants/Carte_stat.vue';
 import Modifier from '../composants/Modifier.vue';
+=======
+import Carte from'../composants/Carte_stat.vue'
+>>>>>>> ef1207e (Mise a jour design)
 
 const livres = ref([
  {id:1, titre:"Le Petit Prince",auteur:"Antoine de Saint-Exupéry",statut:"Disponible"},
