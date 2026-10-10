@@ -1,7 +1,7 @@
 <template>
     <div class="contenu">
       <div>
-        <Livres/>
+        <Livres :livres="livres"/>
       </div>
     </div>
 </template>
